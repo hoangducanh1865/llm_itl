@@ -1,0 +1,30 @@
+# Debug 
+debug_index = debug_index
+import os
+file_name = os.path.basename(__file__)
+print(f"\n### Start debug {debug_index} in {file_name}")
+print(f"### End debug {debug_index} in {file_name}\n")
+
+
+# Commit commands
+git add .
+git commit -m "First commit"
+git push 
+
+
+# Setup commands
+python3.10 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+
+# Preprocessing commands
+bash bash_scripts/preprocess.sh
+
+
+# Training commands
+bash bash_scripts/train.sh
+
+
+# Evaluating commands
+bash bash_scripts/evaluate.sh
